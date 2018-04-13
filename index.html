@@ -1,0 +1,167 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>一緒に私たちの時間</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="一緒に私たちの時間"/>
+    <audio autoplay preload="auto" loop="" id="audio">该浏览器不支持audio属性
+        <source src="music/KinKi Kids - Anniversary.mp3" type="audio/mp3"/>
+    </audio>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+        addEventListener('touchstart', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+            }
+
+            audioAutoPlay();
+        });
+    </script>
+    <!-- bootstrap-css -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+          rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                autoPlay: true,
+                items: 4,
+                itemsDesktop: [640, 5],
+                itemsDesktopSmall: [414, 4]
+
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+<!-- banner -->
+<div class="agileits-banner-info jarallax">
+    <div class="banner-dot">
+        <div class="w3-banner-grids">
+            <div class="col-md-6 w3l-banner-left">
+                <h1><a href="#"> <span>因为我太过美好，因为你太过美丽，</span><span>恋爱之神会把通往未来的钥匙从云的缝隙中为我们放下，所以放心吧，</span><span>相信自己，相信我!</span></a>
+                </h1>
+            </div>
+            <div class="col-md-6 banner-right">
+                <div class="banner-right-info">
+                    <p>一緒に私たちの時間</p>
+                </div>
+                <!--timer-->
+                <div class="agileits-timer">
+                    <div class="clock">
+                        <div class="column years">
+                            <div class="timer" id="years"></div>
+                            <div class="text">Years</div>
+                        </div>
+                        <div class="column days">
+                            <div class="timer" id="days"></div>
+                            <div class="text">Days</div>
+                        </div>
+                        <div class="column">
+                            <div class="timer" id="hours"></div>
+                            <div class="text">Hours</div>
+                        </div>
+                        <div class="timer"></div>
+                        <div class="column">
+                            <div class="timer" id="minutes"></div>
+                            <div class="text">Minutes</div>
+                        </div>
+                        <div class="timer"></div>
+                        <div class="column">
+                            <div class="timer" id="seconds"></div>
+                            <div class="text">Seconds</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!--//timer-->
+                <!--newsletter-->
+
+                <!--//newsletter-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //copyright -->
+<!--scripts-->
+<script type="text/javascript" src=" js/moment.js"></script>
+<script type="text/javascript" src=" js/moment-timezone-with-data.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<!--//scripts-->
+<!-- jarallax -->
+<script src="js/jarallax.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+<!-- //jarallax -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+<!-- team -->
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+</script>
+<script src="js/owl.carousel.js"></script>
+<!-- team -->
+</body>
+</html>	
