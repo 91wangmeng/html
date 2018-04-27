@@ -18,8 +18,9 @@ $(function () {
         var endDate = moment.tz(config.endDate, config.timeZone);
         var diffTime = currentTime.valueOf() - endDate.valueOf();
         var duration = moment.duration(diffTime, 'milliseconds');
-        var days = duration.days();
-        var year = duration.years();
+        var days =  Math.floor(diffTime/(1000*60*60*24));
+        //var months = duration.months();
+        //var year = duration.years();
         var interval = 1000;
         var subMessage = $('.sub-message');
         var clock = $('.clock');
@@ -27,11 +28,7 @@ $(function () {
             endEvent(subMessage, config.newSubMessage, clock);
             return;
         }
-        if (year > 0) {
-            $('#years').text(prependZero(days));
-            $('.years').css('display', 'inline-block');
-            $('.clock .column').css('width', '19%');
-        }
+
         if (days > 0) {
             $('#days').text(prependZero(days));
             $('.days').css('display', 'inline-block');
@@ -41,9 +38,7 @@ $(function () {
             var hours = duration.hours(),
                 minutes = duration.minutes(),
                 seconds = duration.seconds();
-            days = duration.days();
-            year = duration.years();
-            if (hours <= 0 && minutes <= 0 && seconds <= 0 && days <= 0&&year<=0) {
+            if (hours <= 0 && minutes <= 0 && seconds <= 0 && days <= 0) {
                 clearInterval(intervalID);
                 endEvent(subMessage, config.newSubMessage, clock);
                 window.location.reload();
@@ -51,10 +46,6 @@ $(function () {
             if (days === 0) {
                 $('.days').hide();
             }
-            if (year === 0) {
-                $('.years').hide();
-            }
-            $('#years').text(prependZero(year));
             $('#days').text(prependZero(days));
             config.hours.text(prependZero(hours));
             config.minutes.text(prependZero(minutes));
